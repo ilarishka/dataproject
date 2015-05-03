@@ -1,0 +1,418 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>The best represented race in the New York State Assembly</title>
+<!--
+	Bullet Graph Design Specification by Stephen Few of Perceptual Edge: 
+	http://www.perceptualedge.com/articles/misc/Bullet_Graph_Design_Spec.pdf
+
+	PURE CSS/HTML BULLET GRAPH 
+	Modify and edit as needed. 
+	It would be nice if you keep these credits. Thanks!
+	HTML solution rendered by: info.arete.mgrams@gmail.com 
+<div class="caption">Source:<a href=https://www.flickr.com/photos/longislandwins/>longislandwins</a> on <a href=https://www.flickr.com>Flickr</a></div>
+-->        
+
+<style type="text/css">
+html * { margin: 0; padding: 0; border: 0; }
+
+body {
+ text-align: center;
+ width:800px;
+ margin:20px auto;
+ }
+h1 { font: 30pt; font-family: Stag-Light,Georgia,Times New Roman,Times,serif; padding-bottom: 10px; width: 800px; margin: 0 auto 30px auto; text-align: center; }
+h2 { font: 10pt; font-family: Stag-Light,Georgia,Times New Roman,Times,serif; font-weight: 200; font padding: 10px 0 30px 0; width: 750px; margin: 0 auto 10px auto; text-align: left; margin-top: 10px; margin-left: -12px;}
+
+h3 { font: 12pt; font-family: Stag-Light,Georgia,Times New Roman,Times,serif; font-weight: normal; width: 600px; text-align: center; margin: 119px 52px -60px 96px;}
+
+h4 { font: 12pt; font-family: 'Fira Sans', sans-serif; font-weight: bold; font padding: 10px 0 30px 0; width: 750px; margin: 0 auto 10px auto; text-align: left; margin-top: 10px}
+
+p {  font-family: nyt-cheltenham,Georgia,"Times New Roman",serif; width: 750px; margin: 30px auto; padding-top: 7px; text-align: left; line-height: 140%; }
+
+a {
+	color: #326891 }
+
+img {margin-top: 30px;
+position: relative;
+}
+
+div.top {
+	width: 100%;
+	max-height: 500px;
+}
+
+div.text {
+	margin:55px auto;
+	font-family: nyt-cheltenham,Georgia,"Times New Roman",serif;
+	width: 800px;
+	font-size: 13pt;
+/*	float: left;
+	 margin-left: -170px;
+	 margin-top: 10px;*/
+	}
+
+div#container { 
+	position: relative;
+	margin: 40 auto;
+	padding: 20px;
+	text-align: left;
+	width: 750px; 
+}
+
+div.graph-title {padding: 10px 0 20px 0; width: 600px; margin: 0 auto 10px auto; border-bottom: 1px solid #E0E0E0; font-family: 'Fira Sans', sans-serif; font-weight: lighter;}
+
+/*	BULLET GRAPH */
+div.box-wrap { position: relative;
+	 width: 65%;
+	 height: 21px;
+	 top: 0;
+	 left: 130px;
+	 margin: 15px;
+	 padding: 0;
+	 background-color: #eeeeee;
+	font-family: 'Fira Sans', sans-serif;}
+
+/*	CHANGE THE WIDTH AND BACKGROUND COLORS AS NEEDED */
+div.box1 { position: absolute; height: 20px; width: 30%; left: 0; background-color: #E0CCDA; z-index: 1; font-size: 0;}
+div.box2 { position: absolute; height: 20px; width: 30%; left: 30%; background-color: #eeeeee; z-index: 1; font-size: 0; }
+div.box3 { position: absolute; height: 20px; width: 30%; left: 60%; background-color: #eeeeee; z-index: 1; font-size: 0; }
+div.box4 { position: absolute; height: 20px; width: 10%; left: 90%; background-color: #eeeeee; z-index: 1; font-size: 0; }
+
+/* ONE SEGMENT ONLY */
+div.actual { position: absolute; height: 8px; left: 0px; top: 6px; background-color: #6E3357; font-size: 0; z-index: 5; font-size: 0; }
+
+/* TWO SEGMENTS */
+div.actualMAX { position: absolute; height: 8px; left: 0px; top: 6px; background-color: #70a1d8; font-size: 0; z-index: 5; font-size: 0; }
+div.actualPART { position: absolute; height: 8px; left: 0px; top: 6px; background-color: #0a50a1; font-size: 0; z-index: 5; font-size: 0; }
+
+div.mylabel { 
+	position: relative; 
+	height: 20px; 
+	width: 160px; 
+	left: -190px; 
+	top: 2px; 
+	background-color: #fff; 
+	z-index: 7; 
+	font-size: 0;
+	color: #000000; 
+	font: 10pt Arial, sans-serif; 
+	text-align: right; 
+}
+
+div.scale-tb1 {
+	padding: 0; 
+	margin: 0;
+	font-size: 0;
+	width: 100%;
+	border: 0;	
+	position: relative; 
+	top: 10px; 
+	left: 0px; 
+	border-top: 1px solid #8f8f8f; 
+}
+
+div.scale-tb2 {
+	padding: 0; 
+	margin: 0;
+	font-size: 0;
+	width: 200px;
+	border: 0;	
+	position: relative; 
+	top: 0px; 
+	left: 0px; 
+}
+
+/*	SCALE MARKS #6E3357 #E0CCDA */
+div.sc21 { position: absolute; height: 7px; width: 1px; left: 0px; top: 0px; background-color: #8f8f8f; z-index: 7; font-size: 0; }
+div.sc22 { position: absolute; height: 7px; width: 1px; left: 20%; top: 0px; background-color: #8f8f8f; z-index: 7; font-size: 0; }
+div.sc23 { position: absolute; height: 7px; width: 1px; left: 40%; top: 0px; background-color: #8f8f8f; z-index: 7; font-size: 0; }
+div.sc24 { position: absolute; height: 7px; width: 1px; left: 60%; top: 0px; background-color: #8f8f8f; z-index: 7; font-size: 0; }
+div.sc25 { position: absolute; height: 7px; width: 1px; left: 80%; top: 0px; background-color: #8f8f8f; z-index: 7; font-size: 0; }
+div.sc26 { position: absolute; height: 7px; width: 1px; left: 100%; top: 0px; background-color: #8f8f8f; z-index: 7; font-size: 0; }
+
+div.sc31 { position: absolute; height: 7px; width: 1px; left: 0px; top: 0px; background-color: #8f8f8f; z-index: 7; font-size: 0; }
+div.sc32 { position: absolute; height: 7px; width: 1px; left: 39px; top: 0px; background-color: #8f8f8f; z-index: 7; font-size: 0; }
+div.sc33 { position: absolute; height: 7px; width: 1px; left: 79px; top: 0px; background-color: #8f8f8f; z-index: 7; font-size: 0; }
+div.sc34 { position: absolute; height: 7px; width: 1px; left: 119px; top: 0px; background-color: #8f8f8f; z-index: 7; font-size: 0; }
+div.sc35 { position: absolute; height: 7px; width: 1px; left: 159px; top: 0px; background-color: #8f8f8f; z-index: 7; font-size: 0; }
+div.sc36 { position: absolute; height: 7px; width: 1px; left: 199px; top: 0px; background-color: #8f8f8f; z-index: 7; font-size: 0; }
+
+
+/*	SCALE TEXT */
+div.cap21 {
+	 position: absolute;
+	  top: 40px;
+	  left: 0;
+	  width: 15px;
+	  font: 8pt Arial, sans-serif;
+	  text-align: center;
+	  color: #575757;
+	  }
+div.cap22 {
+	 position: absolute;
+	  top: 40px;
+	  left: 20%;
+	  width: 15px;
+	  font: 8pt Arial, sans-serif;
+	  text-align: center;
+	  color: #575757;
+	  }
+div.cap23 {
+	 position: absolute;
+	  top: 40px;
+	  left: 40%;
+	  width: 15px;
+	  font: 8pt Arial, sans-serif;
+	  text-align: center;
+	  color: #575757;
+	  }
+div.cap24 {
+	 position: absolute;
+	  top: 40px;
+	  left: 60%;
+	  width: 15px;
+	  font: 8pt Arial, sans-serif;
+	  text-align: center;
+	  color: #575757;
+	  }
+div.cap25 {
+	 position: absolute;
+	  top: 40px;
+	  left: 80%;
+	  width: 15px;
+	  font: 8pt Arial, sans-serif;
+	  text-align: center;
+	  color: #575757;
+	  }
+div.cap26 {
+	 position: absolute;
+	  top: 40px;
+	  left: 100%;
+	  width: 15px;
+	  font: 8pt Arial, sans-serif;
+	  text-align: center;
+	  color: #575757;
+	  }
+
+div.cap31 { position: absolute; top: 29px; left: -2px; width: 15px; font: 8pt Arial, sans-serif; text-align: center; color: #575757; }
+div.cap32 { position: absolute; top: 29px; left: 35px; width: 15px; font: 8pt Arial, sans-serif; text-align: center; color: #575757; }
+div.cap33 { position: absolute; top: 29px; left: 71px; width: 15px; font: 8pt Arial, sans-serif; text-align: center; color: #575757; }
+div.cap34 { position: absolute; top: 29px; left: 112px; width: 15px; font: 8pt Arial, sans-serif; text-align: center; color: #575757; }
+div.cap35 { position: absolute; top: 29px; left: 152px; width: 15px; font: 8pt Arial, sans-serif; text-align: center; color: #575757; }
+div.cap36 { position: absolute; top: 29px; left: 191px; width: 15px; font: 8pt Arial, sans-serif; text-align: center; color: #575757; }
+
+div.decorationa { position: absolute; height: 50px; left: 0px; top: 6px; background-color: #6E3357; font-size: 0; z-index: 5; font-size: 0; }
+
+.g-age-key {
+	text-align: left;
+	width: 78%;
+	padding-top: 45px;
+	font-size: 0;
+  	color: #000000;
+  	font: 10pt Arial, sans-serif;
+  	margin-left: 85px;
+}
+.g-age-key-item {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 200;
+  margin-right: 100px;
+  display: inline-block;
+  padding: 10px;
+}
+.age-key-box {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  display: inline-block;
+  margin-right: 6px;
+}
+.black-age-key-box {
+  background-color: #E0CCDA;
+}
+.white-age-key-box {
+  background-color: #6E3357;
+}
+
+.footer {
+	margin-top: 20px;
+	margin-bottom: 40px;
+  	font-weight: 300;
+  	font-family: 'Fira Sans', sans-serif;
+ 	color: #999;
+ 	font-size:10pt;
+}
+
+.caption1 {
+	margin-top: 20px;
+	margin-bottom: 40px;
+  	font-weight: lighter;
+  	font-family: 'Fira Sans', sans-serif;
+ 	color: #999;
+ 	text-align: left;
+ 	font-size: 10pt;
+ 	margin-left:12px;
+
+}
+
+
+.caption2 {
+	margin-top: 20px;
+	margin-bottom: 40px;
+  	font-weight: lighter;
+  	font-family: 'Fira Sans', sans-serif;
+ 	color: #999;
+ 	text-align: left;
+ 	font-size: 10pt;
+ 	margin-left:-5px;
+
+}
+
+.pquote {
+    float: center;
+    width: 40%;
+    font-weight: lighter;
+    padding: 13px;
+    margin: 0 13px 13px 0;
+    font-style: italic;
+    font-family: 'Fira Sans', sans-serif;
+ 	color: #999;
+}
+
+blockquote {
+    margin: 0; 
+/* gets rid of the default blockquote margin */
+}
+.pquote {
+  float: center;
+  width: 100%;
+  font-weight: lighter;
+  padding: 13px;
+  margin: 16px 152px -1px 18px;
+  font-style: normal;
+  font-family: 'Fira Sans', sans-serif;
+  color: #999;
+  font-size: 20pt;
+}
+</style>
+
+</head>
+
+<body>
+<div class="decorationa" style="width: 12%"></div>
+<h1 class= "header"><span class="header" style= "font-weight:normal; font-size: 35pt">The politics of race: When numbers are not enough</h1>
+
+<h2 class="byline-dateline"><span class="byline " itemprop="author creator" itemscope="" itemtype="http://schema.org/Person" style="font-size: 9pt; font-family: Stag-Light,Georgia,Times New Roman,Times,serif;">By <span class="byline-author" data-byline-name="ILARIA PAROGNI" itemprop="name" data-twitter-handle="ilaria_parogni" style="font-weight: bold; font-family: Stag-Light,Georgia,Times New Roman,Times,serif;">ILARIA PAROGNI</span>, </span><span class="byline " itemprop="author creator" itemscope="" itemtype="http://schema.org/Person" itemid="http://topics.nytimes.com/top/reference/timestopics/people/l/david_leonhardt/index.html"><time class="dateline" datetime="2015-04-29" style="font-size: 9pt;font-style:normal; font-family: Stag-Light,Georgia,Times New Roman,Times,serif;">APRIL 29, 2015</time>
+</h2>	
+
+<img src="newyork.png" alt="Race in the New York State Assembly" style="width:auto; max-height:525px; margin-left: 1px;"></img>
+<div class="caption1">Source: <a href=https://www.flickr.com/photos/longislandwins/6836370749>longislandwins</a> on <a href=https://www.flickr.com/>Flickr</a>/<a href=https://creativecommons.org/licenses/by/2.0/>Some rights reserved</a></div>
+
+<div class="text">
+<p>The <a href=http://assembly.state.ny.us/mem/>"Assembly Members" tab</a> of the New York State Assembly website has the feel of a 90s yearbook. Each representative gets a spot. Pictures, titles, email addresses; all that is missing is a cheesy inspirational quote. The assemblymen stare back at the reader from the screen, with smiling faces and tailored suits. What one might also notice&mdash;or maybe expect&mdash;is that they are mainly white. How many? 111 out of 149.</p>
+
+<p>Over the past few months, racial issues have taken center stage with prominence across the country. From Ferguson to Baltimore, a chain reaction seems to have begun, unveiling instances of discrimination and racial profiling against African Americans. In New York, a series of demonstrations against police brutality followed the killing of Eric Garner. A black man from Staten Island, Garner died after white policeman Daniel Pantaleo put him in chokehold. The Staten Island grand jury decided not to indict the cop. At the end of April, <a href=<http://www.washingtonpost.com/news/post-nation/wp/2015/04/29/protests-over-baltimore-spread-to-new-york-boston-and-minneapolis/>protesters took to the street</a> in a show of support for the demonstrations in Baltimore over the death of Freddie Gray. Racial discrimination is back on the news. As anger and frustration run high in the city, members of the African American community continue to feel misunderstood and misrepresented.</p>
+</br>
+
+<h4>Attempting a racial breakdown in the New York State Assembly</h4>
+
+<p>Under these circumstances, it might be surprising to hear that the black community is the most proportionally well-represented group in the New York State Assembly, out of the four biggest racial and ethnic groups in the state: whites, blacks, Latinos and Asian. In fact, a close look at the distribution of the state population along ethnic and racial lines reveals how the only case in which there is a close correspondence between number of representatives and share of the electorate belonging to a certain group is with the black population. In particular, there are 16.11 percent of seats in the assembly per 17.50 percent of black population across the state.</p>
+
+<div class="graph-title">
+  Black representation mirrors share of black population in New York</div>
+
+<div id="container">
+
+	<div class="box-wrap">
+		<div class="box1" style="width: 17.50%"></div>
+		<div class="actual" style="width: 16.10%"></div>
+		<div class="mylabel">Black</div>
+	</div>
+
+	<div class="box-wrap">
+		<div class="box1" style="width: 8.20%"></div>
+		<div class="actual" style="width: 0.70%"></div>
+		<div class="mylabel">Asian</div>
+	</div>
+
+	<div class="box-wrap">
+		<div class="box1" style="width: 18.40%"></div>
+		<div class="actual" style="width: 8.70%"></div>
+		<div class="mylabel">Latino</div>
+	</div>
+
+
+	<div class="box-wrap">
+		<div class="box1" style="width: 57.20%"></div>
+		<div class="actual" style="width: 74.50%"></div>
+		<div class="mylabel">White</div>
+
+	  	<div class="cap21">0%</div>
+  		<div class="cap22">20%</div>
+  		<div class="cap23">40%</div>
+  		<div class="cap24">60%</div>
+  		<div class="cap25">80%</div>
+  		<div class="cap26">100%</div>	
+
+    	<div class="scale-tb1">
+    		<div class="sc21"></div>
+    		<div class="sc22"></div>
+    		<div class="sc23"></div>
+    		<div class="sc24"></div>
+    		<div class="sc25"></div>
+    		<div class="sc26"></div>
+    	</div>	 
+	</div>
+
+	<div class="g-age-key">
+    <div class="g-age-key-item">
+      <span class="age-key-box black-age-key-box"></span>Population in New York state
+    </div>
+    <div class="g-age-key-item">
+      <span class="age-key-box white-age-key-box"></span>Representation in New York State Assembly
+    </div>
+
+	<div class="footer">
+		<div class="interactive-source">Source: United States Census Bureau/New York State Assembly</div>
+    </div>
+</div>
+
+<p>Things are worse for Latinos and Asians, who are significantly underrepresented. Asians&mdash;who represent 8.20 percent of the whole population&mdash;get one single seat (0.67 percent of the total) in the current legislature, while only 13 representatives (8.72 percent) come from a Latino background. White assemblymen take the lion share, with 74.50 percent of seats—even though only 57.20 percent of the population belongs to this racial category.</p>
+<p>How do we explain the difference in performance between New York's racial and ethnic minorities? According to Sayu Bojwhani, president of <a href=http://www.newamericanleaders.org>The New American Leaders Project (NALP)</a>, the challenges that the African American population has faced historically have made of political participation a "hard-won right." The role of the Church and civic organizations as a unifying force is also important, Bojwhani argues. Among such organization is the New York Urban League, which has been working since 1919 to ensure equal and fair opportunities for the African American population in New York. 	</p>
+<p>On the contrary, the arrival of immigrant communities of Asians and Latinos is a more recent phenomenon, and this can explain lower levels of involvement in the political and social life of the country. These "newer" minority groups might have less role models to follow, be afraid of discrimination during campaigns due to their immigrant status and not able to fundraise. </p>
+<p>Ellen Young, the first Asian American female representative in the New York State Assembly (elected in 2006, she was in office until 2008), believes that history might help understand low levels of political participation among the Chinese. The legacy of family executions, in particular, might explain their reluctance to participate in the civil process. The family would always want their children not to get involved in politics, she says. "You don't see Chinese take somebody to court a lot, because good people don't go to court, neither as defendant nor as plaintiff." Bojwhani agrees. The experience of authoritarianism in other countries in Asia, as well as in South America, might explain lower levels of political participation among Latinos, she argues. "Not everybody who is coming here is coming from a democracy," she says.</p>
+
+</br>
+<h4>From the limits of data...</h4>
+<p>The challenges when talking about race are many. Throw politics in the mix and the task can be even more daunting. One of the obvious limits of this kind of research is the lack of a clear notion of race. The United States Census Bureau, for example, classifies whites, blacks and Asians as <a href=http://www.census.gov/topics/population/race/about.html>belonging to a race</a>, while it describes Latinos as a group that can <a href=http://www.census.gov/population/hispanic/>belong to any race</a>. But when we look at the overall population in the state of New York, we notice that the majority of Latinos identify exclusively as such. Latinos might not technically be a race, but the exclusivist nature of their group makes them comparable for the purposes of this study.</p>
+
+<aside class="pquote">
+    <blockquote>"I don't think it's about numbers. I think it's about power"</br></br> <a class="sub-pquote" style="font-size:14px; margin-left:320px; color:#999;">Arva Rice, President of New York Urban League</a></blockquote>
+</aside>
+
+<p>Even more comprehensive projects seem to have taken a similar approach. The New American Leaders Project (NALP), for example, released <a href=http://represent2020.newamericanleaders.org>"Representation 2020,"</a> a 2014 report tracking the number of people in office in state governments. Their work is primarily aimed at showing the importance of ensuring the political representation of specific ethnic and racial groups across the country, with a specific focus on the Asian and Latino immigrant communities.</p>
+
+
+<p>While The New American Leaders Project works on a much larger scale, analyzing the racial makeup of the New York State Assembly presents similar challenges. In collecting data, they followed an approach similar to mine, assessing the pictures of each subject available online, the origin of their names and the material provided by the government. "The potential for error is very significant," Bojwhani says. In particular, some people might identify with more than one race, while women married to men of a different race might take their husbands' name and complicate the process.</p>
+
+<p>The New American Leaders Project employs an extensive amount of resources to ensure a thorough verification of the information. While my analysis cannot rely on similar support and the method is still susceptible to error, it can at least provide a general idea of how serious under-representation is for certain groups.</p>
+
+</br>
+<h4>...to the limits of political representation</h4>
+<p>After the killing of Michael Brown in Ferguson, Missouri, many spoke about how the gap between black population and their overwhelmingly white elected officials as a symptom of the country's problem with race inequality. "Ferguson has been pegged as an outlier but, though the representation gap in Ferguson is particularly pronounced, its basic story of African American underrepresentation plays out in many communities across the country," <a href=http://www.demos.org/publication/problem-african-american-underrepresentation-city-councils> a study by public policy organization Demos stated</a>.</p> 
+
+<img src="michaelbrown.png" alt="Michael Brown" style="width:auto; max-height:515px; margin-left:-12px"></img>
+<div class="caption2">Source: <a href=https://www.flickr.com/photos/neontommy/15949589515>Neon Tommy</a> on <a href=https://www.flickr.com/>Flickr</a>/<a href=https://creativecommons.org/licenses/by/2.0/>Some rights reserved</a></div>
+
+<p>But political representation alone does not guarantee the end of inequality. "I don't think it's about numbers. I think it's about power," Rice says. "If you have a certain number of people in the legislature, how many of them are on the budget committee?" According to her, as long as assemblymen are not able to translate their presence in the assembly into effective policy, the system will remain fundamentally unfair. Political representation might be a good place to start, but is not enough.</p>
+
+</div>
+
+
+
+</div><!-- container -->	
+    </body>
+</html>
